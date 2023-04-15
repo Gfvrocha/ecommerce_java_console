@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
+import javax.swing.JOptionPane;
+
 public class App 
 {
     /**
@@ -106,7 +108,7 @@ public class App
          *      (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 30 / 100
          * 
          * Feito o calculo o sistema deverá mostrar um relatorio com os dados do pedido e o valor total a pagar.
-         */
+         
 
          System.out.println("========================================");
          System.out.println("\t PETSHOP DA PAULA");
@@ -154,11 +156,36 @@ public class App
             System.out.println("========================================");
             System.out.printf("Pet: %s\nPeso: %sKg\nSexo: %s\nValor total: R$%s\n\n ", nomePet, pesoPet, sexoPet, valorTotal);
          }
+         */
 
+         // Trabalhando com JOptionPane
+
+         var msn = "PetShop da Paula\n Seja bem-vindo(a)";
+         JOptionPane.showMessageDialog(null, msn ); 
+
+         String nomeCliente = JOptionPane.showInputDialog("Qual é o nome do cliente: ");
+         String telefone = JOptionPane.showInputDialog("Telefone do " + nomeCliente +": ");
+         String nomePet = JOptionPane.showInputDialog("Qual é o nome do(a) Pet: ");
+         double pesoPet = Double.parseDouble(JOptionPane.showInputDialog("Qual o peso do(a) "+nomePet));
+         String sexoPet = JOptionPane.showInputDialog("Sexo do(a) "+nomePet + "\nM = macho\nF = femêa");
+
+         var valorPorPeso = 2.6;
+         var valorTotal = 0.0;
+
+         if (sexoPet.equals("M")) {
+            valorTotal = (pesoPet * valorPorPeso) + (pesoPet * valorPorPeso) * 15 / 100;
+         } 
+         else {
+            valorTotal = (pesoPet * valorPorPeso) + (pesoPet * valorPorPeso) * 30 / 100;
+         }
+
+         String relatorio = "Nome do cliente: " + nomeCliente + "\n";
+         relatorio += "Telefone: " + telefone + "\n";
+         relatorio += "Pet do(a) " + nomeCliente + ": " + nomePet + "\n";
+         relatorio += "Peso do(a) " + nomePet + ": " + pesoPet + "\n";
+         relatorio += "Total do serviço: " + valorTotal + "\n";
          
-
-
-        
+         JOptionPane.showMessageDialog(null, relatorio );
 
 
 
