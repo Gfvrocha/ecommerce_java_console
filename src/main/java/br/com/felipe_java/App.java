@@ -93,8 +93,90 @@ public class App
         } 
         */
 
+        /*
+         * ==== Exercicio 2
+         * Paula tem uma petshop, ela precisa de um sistema para controlar seus serviços.
+         * Neste sistema, precisa cadastrar o cliente (Dados básicos) os dados do pet, o peso do pet
+         * depois o sistema deverá calcular o valor do banho pelo peso do pet.
+         * calculo: 
+         * 
+         *  - Para macho:
+         *      (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 15 / 100
+         *  - Para femea:
+         *      (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 30 / 100
+         * 
+         * Feito o calculo o sistema deverá mostrar um relatorio com os dados do pedido e o valor total a pagar.
+         */
+
+         System.out.println("========================================");
+         System.out.println("\t PETSHOP DA PAULA");
+         System.out.println("========================================");
+
+         System.out.println("Qual é o nome do cliente: ");
+         var nomeCliente = reader.readLine();
+
+         System.out.println("Qual é o endereço do cliente: ");
+         var enderecoCliente = reader.readLine();
+
+         System.out.println("Telefone: ");
+         var telefoneCliente = Integer.parseInt( reader.readLine());
+
+         System.out.println("========================================");
+         System.out.println("\t DADOS DO PET");
+         System.out.println("========================================");
+
+
+         System.out.println("Nome do Pet: ");
+         var nomePet = reader.readLine();
+
+         System.out.printf("Peso do(a) %s: ", nomePet);
+         double pesoPet = Double.parseDouble( reader.readLine());
+
+         System.out.println("Sexo => M(macho) F(femea): ");
+         var sexoPet = reader.readLine();
+        
+         var valorTotal = 0.0;   
+
+         if (sexoPet.equals("M")) {
+            valorTotal = (pesoPet * 2.50)  + (pesoPet * 2.50) * 15 / 100;
+
+            System.out.println("========================================");
+            System.out.println("\tORDEM DE SERVIÇO");
+            System.out.println("========================================");
+            System.out.printf("Pet: %s\nPeso: %sKg\nSexo: %s\nValor total: R$%s\n\n ", nomePet, pesoPet, sexoPet, valorTotal);
+            
+         } 
+         if (sexoPet.equals("F")) {
+            valorTotal = (pesoPet * 2.50)  + (pesoPet * 2.50) * 15 / 100;
+            
+            System.out.println("========================================");
+            System.out.println("\tORDEM DE SERVIÇO");
+            System.out.println("========================================");
+            System.out.printf("Pet: %s\nPeso: %sKg\nSexo: %s\nValor total: R$%s\n\n ", nomePet, pesoPet, sexoPet, valorTotal);
+         }
+
+         
+
 
         
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
          
 
 
