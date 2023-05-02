@@ -158,8 +158,10 @@ public class App
          }
          */
 
-         // Trabalhando com JOptionPane
 
+
+         // Trabalhando com JOptionPane
+         /* 
          var msn = "PetShop da Paula\n Seja bem-vindo(a)";
          JOptionPane.showMessageDialog(null, msn ); 
 
@@ -186,6 +188,94 @@ public class App
          relatorio += "Total do serviço: " + valorTotal + "\n";
          
          JOptionPane.showMessageDialog(null, relatorio );
+         */
+
+
+
+         /*
+          Faça um programa que ajude a calcular o valor total de uma ponte.
+          Para isso precisa perguntar algumas informações:
+          - valor por metro quadrado do serviço
+          - total de metros da ponte
+          - opções de ferro para fundação
+          - valor do ferro varia de acordo com a opção escolhida
+          - no final mostre um relatorio com as informações
+          - mostre tbm o valor de 30% de imposto arrecadado da população 
+          
+          - utilizar if and switch
+          
+
+         System.out.println("========================================");
+         System.out.println("\tCONSTRUTORA ROCHA");
+         System.out.println("========================================");
+         
+         System.out.println("Qual é o tipo de material desejado para fundação da ponte: \n1 - Ferro\n2 - Ferro Fundido\n3 - Ferro Maciço");
+         System.out.println("Sua escolha?");
+         int numero = Integer.parseInt(reader.readLine());
+         System.out.println("========================================");
+
+         System.out.println("Qual é o comprimento da ponte: ");
+         var comprimentoPonte = Integer.parseInt(reader.readLine());
+         System.out.println("Qual é a largura da ponte: ");
+         var larguraPonte = Integer.parseInt(reader.readLine());
+
+         var tamanhoPonte = comprimentoPonte * larguraPonte;
+                
+         System.out.println("========================================");
+         System.out.println("Valor do serviço por M²");
+         var valorServico = Integer.parseInt(reader.readLine());
+         System.out.println("========================================");
+
+         var valorTotalPonte = 0.0;
+
+         if(numero == '1') {
+            valorTotalPonte = valorServico * tamanhoPonte;
+
+         } else if(numero == '2') {
+            valorTotalPonte = valorServico * tamanhoPonte;
+
+         } else  {
+            valorTotalPonte = valorServico * tamanhoPonte;
+         }
+
+         var materialEscolhido = Integer.toString(numero);
+
+         switch(numero){
+            case 1: 
+               materialEscolhido = "Ferro";  
+               break;
+            case 2:
+               materialEscolhido = "Ferro Fundido"; 
+               break;
+            case 3:
+              materialEscolhido = "Ferro Maciço";
+               break;
+
+         }
+
+         var imposto = valorTotalPonte * 30 / 100;
+
+         System.out.println("\n========================================");
+         System.out.println("\tRELATORIO FINAL");
+         System.out.println("========================================");
+         System.out.println("Area total da ponte: " + tamanhoPonte + "M²");
+         System.out.println("Material para fundação: " + materialEscolhido );
+         System.out.println("Mão de obra: R$ " + valorServico + " por M²");
+         System.out.println("Arrecadação imposto local 30%: R$ " + imposto );
+         System.out.println("Custo para governo: R$ " + (valorTotalPonte - imposto ));
+         System.out.println("Valor total: R$ " + valorTotalPonte);
+         System.out.println("========================================");
+
+      */   
+
+         
+         
+
+
+
+
+
+
 
 
 
